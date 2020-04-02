@@ -10,11 +10,11 @@ __java -cp absolute/path/to/compiled/classes:absolute/path/to/junit-4.12.jar:abs
 
 2) If we are in the root dir(containing the two jar files)
 
-__javac -cp absolute/path/to/java/files:junit-4.12.jar:hamcrest-core-1.3.jar your.package.TestClassName (and further necessary java files)__
+__javac -cp absolute/path/to/java/files:junit-4.12.jar:hamcrest-core-1.3.jar your.package.TestClassName.java (and further necessary java files)__
 
 OR
 
-__javac -cp .:junit-4.12.jar:hamcrest-core-1.3.jar absolute/path/to/java/files/your.package.TestClassName (and further necessary java files)__
+__javac -cp .:junit-4.12.jar:hamcrest-core-1.3.jar absolute/path/to/java/files/your.package.TestClassName.java (and further necessary java files)__
 
 __java -cp absolute/path/to/compiled/classes:junit-4.12.jar:hamcrest-core-1.3.jar org.junit.runner.JUnitCore your.package.TestClassName__
 
