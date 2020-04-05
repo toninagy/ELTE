@@ -80,7 +80,7 @@ public class AdderTest {
     // assertEquals(
     //   Integer.parseInt(Adder.add("1", "-1")),
     //   String.valueOf(0));
-  }
+  //}
 
   // @Test
   // public void add_recognizesNullReference(){
