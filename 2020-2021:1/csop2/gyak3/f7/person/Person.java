@@ -13,6 +13,12 @@ public class Person {
         this.job = job;
         this.gender = gender;
         this.birthYear = birthYear;
+        // firstName = "Andras";
+        // secondName = "Andras";
+        // firstName == secondName //true
+        // firstName1 = new String("Andras");
+        // secondName1 = new String("Andras");
+        // firstName1 == secondName1 //false
     }
 
     @Override
