@@ -2,8 +2,8 @@ import java.util.*;
 
 public class Divisors {
 
-    static LinkedList<Integer> divisors(int num) {
-        LinkedList<Integer> divisors = new LinkedList<>();
+    static List<Integer> divisors(int num) { //return a List instead of a more specific LinkedList
+        List<Integer> divisors = new LinkedList<>();
         for(int i=1; i<(num/2)+1; i++) {
             if(num%i == 0) {
                 divisors.add(i);
@@ -13,8 +13,10 @@ public class Divisors {
     }
 
     public static void main(String[] args) {
+        LinkedList<Integer> list = (LinkedList<Integer>) divisors(20);
         System.out.println(divisors(20));
-        System.out.println(divisors(20).getLast());
+        System.out.println(list.getLast());
+        // System.out.println((LinkedList<Integer>)(divisors(20).getLast())); //compilation error
     }
     
 }
