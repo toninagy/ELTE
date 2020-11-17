@@ -16,7 +16,7 @@ public class Divisors {
         LinkedList<Integer> list = (LinkedList<Integer>) divisors(20);
         System.out.println(divisors(20));
         System.out.println(list.getLast());
-        // System.out.println((LinkedList<Integer>)(divisors(20).getLast())); //compilation error
+        // System.out.println((LinkedList<Integer>) (divisors(20)).getLast()); //compilation error
     }
     
 }
