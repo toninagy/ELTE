@@ -10,6 +10,7 @@ public class PrintedBook extends Book {
         coverType = cover;
     }
 
+    @Override
     public int getPrice() {
         if(coverType.equals(CoverType.Softcover)) {
             return pages*2;

@@ -1,15 +1,15 @@
-public class Book {
+public abstract class Book {
     private String author;
     private String title;
     protected int pages;
 
-    public Book() {
+    protected Book() {
         this.author = "John Steinbeck";
         this.title = "Of Mice and Men";
         this.pages = 107;
     }
 
-    public Book(String author, String title, int pages) {
+    protected Book(String author, String title, int pages) {
         if(author.length() < 2) {
             throw new IllegalArgumentException("Author length is less than 2");
         }
@@ -30,11 +30,11 @@ public class Book {
         return author + ": " + title + "; pages: " + pages;
     }
 
-    public String createReference(String article, int from, int to) {
-        return getShortName() + "[" + from + "-" + to + "] referenced in article:" + article;
-    }
-
     public String getAuthor() {
         return author;
     }
+
+    public abstract int getPrice();
+
+    public abstract String createReference(String article, int from, int to);
 }

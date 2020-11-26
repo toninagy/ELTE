@@ -6,6 +6,7 @@ public class EBook extends Book {
         this.fileSize = fileSize;
     }
 
+    @Override
     public int getPrice() {
         return pages + fileSize;
     }
