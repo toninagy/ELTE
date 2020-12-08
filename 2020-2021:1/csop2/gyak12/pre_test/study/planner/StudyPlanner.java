@@ -2,7 +2,7 @@ package study.planner;
 
 import java.util.*;
 
-public class StudyPlanner {
+public class StudyPlanner implements Comparable<StudyPlanner> {
 
     Map<String,Set<Integer>> bookToPages;
 
@@ -16,6 +16,20 @@ public class StudyPlanner {
             throw new StudyException("Book " + bookName + " is unknown!\n");
         }
         return pageSet;
+    }
+
+    public boolean isStudied(String bookName, int page) {
+        return isStudied(bookName, page, page);
+    }
+
+    public boolean isStudied(String bookName, int from, int to) {
+        Set<Integer> pageSet = getPageSet(bookName);
+        for(int i=from; i<=to; i++) {
+            if(pageSet.contains(i)) {
+                return true;
+            }
+        }
+        return false;
     }
 
     public int pageCountOf(String bookName) {
@@ -62,5 +76,35 @@ public class StudyPlanner {
             retVal.append(" " + split[i]);
         }
         return retVal.toString();
+    }
+
+    @Override 
+    public boolean equals(Object o) {
+        if(o == null) {
+            return false;
+        }
+        if(!this.getClass().equals(o.getClass())) {
+            return false;
+        }
+        StudyPlanner other = (StudyPlanner) o;
+        return bookToPages.equals(other.bookToPages);
+    }
+
+    @Override 
+    public int hashCode() {
+        return bookToPages.hashCode();
+    }
+
+    protected int pagesSum() {
+        int sum = 0;
+        for(Set<Integer> set: bookToPages.values()) {
+            sum += set.size();
+        }
+        return sum;
+    }
+
+    @Override
+    public int compareTo(StudyPlanner other) {
+        return pagesSum() - other.pagesSum();
     }
 }

@@ -116,7 +116,7 @@ A `StudyPlanner` osztály leszármazottja legyen a `study.planner.StrictStudyPla
 
 - Az eltárolt adatokon nem kell módosítani, hanem meg kell találni az alsó és a felső határt.
     - Tipp: a legkisebb indexű szakaszt úgy könnyű megtalálni, ha a `Set`-ből egy `TreeSet`-et készítünk, majd arra meghívjuk a `ceiling(Integer.MIN_VALUE)` műveletet; a legnagyobb értékhez `floor(Integer.MAX_VALUE)` használható.	
-- A megörökölt metódusok (`pageCountOf` és a két `isStudied`) működjenek eszerint.
+    - A megörökölt metódusok (`pageCountOf` és a két `isStudied`) működjenek eszerint.
 - Példa: `StrictStudyPlanner` objektumba töltve a fenti példa adatait, `isStudied("Analizis", 141, 149)` igazat ad, mert a `20`. és `190`. oldal között mindegyik fel van adva.
 
 
@@ -149,6 +149,7 @@ Egy `studyDifferently` teszteset tesztelje, hogy két különböző módon betö
 
 Két `StudyPlanner` legyen egymással összehasonlítható a következő módon.
 
-Az a `StudyPlanner` nagyobb, amelyben több oldalt kell megtanuni.
+Az a `StudyPlanner` nagyobb, amelyben több oldalt kell megtanulni.
 
 Írjon a három esetre egy-egy unit test-et.
+
