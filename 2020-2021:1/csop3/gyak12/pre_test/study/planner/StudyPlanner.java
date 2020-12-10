@@ -2,7 +2,7 @@ package study.planner;
 
 import java.util.*;
 
-public class StudyPlanner {
+public class StudyPlanner implements Comparable<StudyPlanner> {
 
     Map<String,Set<Integer>> bookToPages;
 
@@ -16,6 +16,20 @@ public class StudyPlanner {
             throw new StudyException("Book " + bookName + " is unknown!\n");
         }
         return pageSet;
+    }
+
+    public boolean isStudied(String bookName, int page) {
+        return isStudied(bookName, page, page);
+    }
+
+    public boolean isStudied(String bookName, int from, int to) {
+        Set<Integer> pageSet = getPageSet(bookName);
+        for(int i=from; i<=to; i++) {
+            if(pageSet.contains(i)) {
+                return true;
+            }
+        }
+        return false;
     }
 
     public int pageCountOf(String bookName) {
@@ -58,5 +72,53 @@ public class StudyPlanner {
             retVal.append(" " + split[i]);
         }
         return retVal.toString();
+    }
+
+    protected int sumOfPages() {
+        int sum = 0;
+        for(Set<Integer> s: bookToPages.values()) {
+            sum += s.size();
+        }
+        return sum;
+    }
+
+    // @Override
+    // public boolean equals(Object o) {
+    //     if(o == null) {
+    //         return false;
+    //     }
+    //     if(o == this) {
+    //         return true;
+    //     }
+    //     if(!this.getClass().equals(o.getClass())) {
+    //         return false;
+    //     }
+    //     StudyPlanner other = (StudyPlanner) o;
+    //     return this.bookToPages.equals(other.bookToPages);
+    // }
+
+    @Override
+    public boolean equals(Object o) {
+        if(o == null) {
+            return false;
+        }
+        if(o == this) {
+            return true;
+        }
+        if(!(o instanceof StudyPlanner)) {
+            return false;
+        }
+        StudyPlanner other = (StudyPlanner) o;
+        return this.bookToPages.equals(other.bookToPages);
+    }
+
+    @Override 
+    public int hashCode() {
+        return bookToPages.hashCode();
+    }
+
+    @Override
+    public int compareTo(StudyPlanner o) {
+        return sumOfPages() - o.sumOfPages();
     }
 }

@@ -149,6 +149,6 @@ Egy `studyDifferently` teszteset tesztelje, hogy két különböző módon betö
 
 Két `StudyPlanner` legyen egymással összehasonlítható a következő módon.
 
-Az a `StudyPlanner` nagyobb, amelyben több oldalt kell megtanuni.
+Az a `StudyPlanner` nagyobb, amelyben több oldalt kell megtanulni.
 
 Írjon a három esetre egy-egy unit test-et.
