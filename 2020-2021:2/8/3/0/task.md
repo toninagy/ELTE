@@ -5,3 +5,4 @@ főprogramot, amely példányosítja a `Foo` osztályt, és meghívja a metódus
 Készítsen egy másik csomagot `otherpackage` néven, amelyben legyen egy `Main`
 főprogram, amely szintén példányosítja a `packagename` csomagban található
 `Foo` osztályt.
+
