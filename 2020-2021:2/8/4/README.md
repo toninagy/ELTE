@@ -6,7 +6,7 @@ jar cf mass-deploy.jar mass/PointMain.class mass/util/Point.class
 java -classpath mass-deploy.jar mass.PointMain
 
 // Extract JAR file (to check its content)
-java xf mass-deploy.jar
+jar xf mass-deploy.jar
 
 //Create JAR file containing a modified MANIFEST.MF and .class files
 jar cfm mass-deploy.jar ./MANIFEST.MF mass/PointMain.class mass/util/Point.class 
