@@ -1,5 +1,5 @@
 ~~~
-// Create JAR file containing mass/Main.class mass/util/Point.class
+// Create JAR file containing mass/PointMain.class mass/util/Point.class
 jar cf mass-deploy.jar mass/PointMain.class mass/util/Point.class
 
 // Run JAR file specifying classpath containing the psvm method
