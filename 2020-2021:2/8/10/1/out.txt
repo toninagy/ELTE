@@ -1,0 +1,6 @@
+My fictional article
+foo_body
+foo_conclusion
+Jo: Of M; 107[1-107] referenced in article: My fictional article
+John Steinbeck:Of Mice and Men, pages: 113[1-113] referenced in article: My fictional article
+author2:Digitalised: Title, pages: 100(PDF Size: 12) [1-100] referenced in article: My fictional article
