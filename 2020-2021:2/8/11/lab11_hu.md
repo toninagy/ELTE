@@ -4,7 +4,7 @@
 
 ### 1. feladat
 
-Módosítsa a 8. feladatsor 1. feladatát a következők szerint. `Book` objektumot a következőkben ne lehessen konstruálni, csak a leszármazott osztályait, továbbá a `Book` osztály garantája azt, hogy a leszármazott osztályok interfésze legalább a következő: konstruktor, `getShortName()`, `toString()`, `getPrice()`, `createReference()`.
+Módosítsa a 8. feladatsor 1. feladatát a következők szerint. `Book` objektumot a következőkben ne lehessen konstruálni, csak a leszármazott osztályait, továbbá a `Book` osztály garantája azt, hogy a leszármazott osztályok interfésze legalább a következő: konstruktor, `getShortName()`, `toString()`, `getPrice()`, `createReference()`. 
 
 A `getPrice()` metódus tartozzon a `Book` osztályba, de ne tartozzon hozzá implementáció. Az osztály legyen absztrakt; a `Book` osztály implementálja a következő metódusokat:
 
