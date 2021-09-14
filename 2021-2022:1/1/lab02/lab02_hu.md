@@ -19,7 +19,9 @@ Módosítsa a `Point` osztályban a `mirror(p)` műveletet úgy, hogy paraméter
 
 Írjon `distance(p)` műveletet is, mely kiszámolja az adott pont távolságát
 egy paraméterként kapott `p` ponttól. Használja a `Math.sqrt(...)`
-függvényt és a Pitagorasz tételt!
+függvényt és a Pitagorasz tételt! 
+
+(https://courses.lumenlearning.com/waymakercollegealgebra/chapter/distance-in-the-plane/)
 
 Frissítse a `PointMain` osztályt az új műveletekkel!
 
